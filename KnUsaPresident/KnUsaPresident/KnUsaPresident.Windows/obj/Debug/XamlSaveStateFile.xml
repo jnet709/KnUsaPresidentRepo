@@ -1,0 +1,11 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\trongxamarin_invs2015\knusapresident\knusapresident\knusapresident.windows\obj\debug\intermediatexaml\knusapresident.windows.exe" HashGuid="32a3f714-5408-1f9c-b552-844880525020" />
+    <ReferenceAssembly PathName="c:\trongxamarin_invs2015\knusapresident\knusapresident\knusapresident\bin\debug\knusapresident.dll" HashGuid="7cc2af56-1daa-340a-96df-01ea294efd4a" />
+    <ReferenceAssembly PathName="c:\trongxamarin_invs2015\knusapresident\packages\xamarin.forms.2.3.0.107\lib\win81\xamarin.forms.core.dll" HashGuid="c30391b9-f93a-55bc-3bed-bad91032c5ef" />
+    <ReferenceAssembly PathName="c:\trongxamarin_invs2015\knusapresident\packages\xamarin.forms.2.3.0.107\lib\win81\xamarin.forms.platform.dll" HashGuid="6b938cd4-44c0-2618-7eb6-4caa3f482076" />
+    <ReferenceAssembly PathName="c:\trongxamarin_invs2015\knusapresident\packages\xamarin.forms.2.3.0.107\lib\win81\xamarin.forms.platform.winrt.dll" HashGuid="0582f833-519c-0b5c-af4a-4e3bd65d7303" />
+    <ReferenceAssembly PathName="c:\trongxamarin_invs2015\knusapresident\packages\xamarin.forms.2.3.0.107\lib\win81\xamarin.forms.platform.winrt.tablet.dll" HashGuid="8b4d7ca9-dc92-b144-cb48-ecad39695391" />
+    <ReferenceAssembly PathName="c:\trongxamarin_invs2015\knusapresident\packages\xamarin.forms.2.3.0.107\lib\win81\xamarin.forms.xaml.dll" HashGuid="68924db8-a65f-e414-d0af-af182cfb1786" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

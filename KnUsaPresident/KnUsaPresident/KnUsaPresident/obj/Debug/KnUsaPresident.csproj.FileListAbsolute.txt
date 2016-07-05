@@ -1,0 +1,14 @@
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\bin\Debug\KnUsaPresident.dll
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\bin\Debug\KnUsaPresident.pdb
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\bin\Debug\Xamarin.Forms.Core.dll
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\bin\Debug\Xamarin.Forms.Platform.dll
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\bin\Debug\Xamarin.Forms.Core.xml
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\obj\Debug\KnUsaPresident.KnUsaPresidentPage.xaml.g.cs
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\obj\Debug\KnUsaPresident.dll
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\obj\Debug\KnUsaPresident.pdb
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\bin\Debug\Xamarin.Forms.Core.pdb
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\obj\Debug\KnUsaPresident.csprojResolveAssemblyReference.cache

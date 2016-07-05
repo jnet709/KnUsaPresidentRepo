@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:KnUsaPresident;assembly=KnUsaPresident"
+             xmlns:behaviors="clr-namespace:KnUsaPresident.Behaviors;assembly=KnUsaPresident"
+             x:Class="KnUsaPresident.KnUsaPresidentPage" Padding="10,10">
+
+
+  
+  <StackLayout Padding="5,5">
+    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+       <Label Text="USA Presidents" FontSize="Large" FontAttributes="Italic" />
+       <Image Source="{local:ImageResource KnUsaPresident.Images.usflag.png}"></Image>
+    </StackLayout>
+    <BoxView VerticalOptions="CenterAndExpand" HorizontalOptions="Center" WidthRequest="200" HeightRequest="3" BackgroundColor="Accent"/>
+    <Entry x:Name="entrySearch" Text="" Placeholder="Search by Name, Term or Party" TextChanged="Search">
+           
+    </Entry>
+    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand">
+      <StackLayout.Resources>
+        <ResourceDictionary>
+          <Style TargetType="Label">
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+          </Style>
+        </ResourceDictionary>
+      </StackLayout.Resources>
+      
+      <Label Text="Search by"></Label>
+      
+      <Label x:Name="labelNameSearch" Text="Name">
+        <Label.Behaviors>
+          <behaviors:RadioBehavior x:Name="nameBehavior" 
+                                   SearchBy="Name"
+                                   IsChecked="True"
+                                   SearchKey="{Binding Source={x:Reference entrySearch}, Path=Text}">
+          </behaviors:RadioBehavior>
+        </Label.Behaviors>
+        
+        <Label.Triggers>
+          <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference nameBehavior}, Path=IsChecked}" Value="True">
+            <Setter Property="TextColor" Value="Green"></Setter>
+          </DataTrigger>
+          
+        </Label.Triggers>
+        
+        
+      </Label>
+
+      <Label x:Name="labelTermSearch" Text="Term">
+        <Label.Behaviors>
+          <behaviors:RadioBehavior x:Name="termBehavior" 
+                                   SearchBy="Term"
+                                   SearchKey="{Binding Source={x:Reference entrySearch}, Path=Text}">
+          </behaviors:RadioBehavior>
+        </Label.Behaviors>
+        
+        <Label.Triggers>
+          <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference termBehavior}, Path=IsChecked}" Value="True">
+            <Setter Property="TextColor" Value="Green"></Setter>
+          </DataTrigger>         
+          
+        </Label.Triggers>
+        
+      </Label>
+      <Label x:Name="labelPartySearch" Text="Party">
+        <Label.Behaviors>
+          <behaviors:RadioBehavior x:Name="partyBehavior" 
+                                   SearchBy="Party"
+                                   SearchKey="{Binding Source={x:Reference entrySearch}, Path=Text}"></behaviors:RadioBehavior>
+        </Label.Behaviors>
+        
+        <Label.Triggers>
+          <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference partyBehavior}, Path=IsChecked}" Value="True">
+            <Setter Property="TextColor" Value="Green"></Setter>
+          </DataTrigger>
+        </Label.Triggers>
+      </Label>     
+      
+      
+    </StackLayout>
+    
+    
+    <ListView x:Name="listViewPresidents">
+      <ListView.RowHeight>
+        <OnPlatform x:TypeArguments="x:Int32" iOS="120" Android="110" WinPhone="110" />
+      </ListView.RowHeight>
+      
+      <ListView.Triggers>
+        <DataTrigger TargetType="ListView" Binding="{Binding Source={x:Reference nameBehavior}, Path=IsChecked}" Value="True">
+          <Setter Property="ItemsSource" Value="{Binding Source={x:Reference nameBehavior}, Path=SearchList}"></Setter>
+        </DataTrigger>
+
+        <DataTrigger TargetType="ListView" Binding="{Binding Source={x:Reference termBehavior}, Path=IsChecked}" Value="True">
+          <Setter Property="ItemsSource" Value="{Binding Source={x:Reference termBehavior}, Path=SearchList}"></Setter>
+        </DataTrigger>
+
+        <DataTrigger TargetType="ListView" Binding="{Binding Source={x:Reference partyBehavior}, Path=IsChecked}" Value="True">
+          <Setter Property="ItemsSource" Value="{Binding Source={x:Reference partyBehavior}, Path=SearchList}"></Setter>
+        </DataTrigger>
+        
+      </ListView.Triggers>
+      
+     <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ContentView>
+              <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                  </Grid.ColumnDefinitions>
+
+                  <StackLayout Grid.Column="0">
+                    <Image Source="{Binding PhotoFile}" />
+                  </StackLayout>
+
+                  <StackLayout Orientation="Vertical" Grid.Column="1">
+                    <Label Text="{Binding Name, StringFormat='Name: {0}'}" />
+                    <Label Text="{Binding Id, StringFormat='Order: {0}'}" />
+                    <Label Text="{Binding Party, StringFormat='Party: {0}'}" />
+                    <Label Text="{Binding Term, StringFormat='Term: {0}'}" />
+                  </StackLayout>                 
+                </Grid>
+            </ContentView>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+
+    </ListView>
+  </StackLayout>
+
+</ContentPage>

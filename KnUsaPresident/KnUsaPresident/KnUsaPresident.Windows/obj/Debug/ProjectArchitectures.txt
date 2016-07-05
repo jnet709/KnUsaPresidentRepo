@@ -1,0 +1,2 @@
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident.Windows\KnUsaPresident.Windows.csproj;neutral
+C:\TrongXamarin_InVS2015\KnUsaPresident\KnUsaPresident\KnUsaPresident\KnUsaPresident.csproj;neutral
